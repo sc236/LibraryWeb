@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 
 <html>
-<title> Welcome </title>
-    <div class="Introduction">
-    <h1> Online Library</h1>
-    <p> This is an online library to that offers services electronically </p>
+  <head>
+    <title> Welcome </title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <!-- INTRODUCTION HEADER -->
+    <div class="introduction">
+      <h1> Online Library</h1>
+      <p> This is an online library to that offers services electronically </p>
     </div>
+
+    <!-- TOP NAV BAR -->
     <div class="top-list">
-    <ul> 
-    <li>Home </li>
-   <li>About </li>
-    <li>Books</li>
-    <li> Services</li>
-    </ul>
-</div>
-    <p></p>
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit">Go<i class="fa fa-search"></i></button>
-    </form>
-</p>
+      <ul> 
+        <li>Home </li>
+        <li>About </li>
+        <li>Books</li>
+        <li> Services</li>
+      </ul>
+    </div>
 
-
-
-</html>
+    <!-- SEARCH FORM -->  
+    <form action="" onsubmit='return false' method='get'>
+      <input type="text" placeholder="Search.." name="search" id="search">
+      <button type="submit" onclick='getBookData()'><i class="fa fa-search"></i></button>
+    </form>  
+    
+    <!-- DIV ELEMENT FOR BOOKS -->
+    <div id="render-dom"></div>
+    
+    
+    
+    
+    <script src="./main.js"></script>
+  </body>
+    
+  </html>
