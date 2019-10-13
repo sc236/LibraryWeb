@@ -21,10 +21,10 @@ async function getBookData(){
           renderDom.innerHTML+=`
 
           <div class="col-4">
-          <img class="d-block mx-auto" src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
-          <hr />
-          <h6>${book.volumeInfo.title}</h6>
-          <p>Author: ${book.volumeInfo.authors[0]}</p>
+            <img class="d-block mx-auto" style="height: 10em;" src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
+            <hr />
+            <h6>${book.volumeInfo.title}</h6>
+            <p>Author: ${book.volumeInfo.authors[0]}</p>
           </div>
 
           `;
