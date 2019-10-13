@@ -19,12 +19,11 @@ async function getBookData(){
         data.items.forEach(function(book){
           console.log(`Book: ${book.volumeInfo.title}`);
           renderDom.innerHTML+=`
-
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
             <img class="d-block mx-auto" style="height: 10em;" src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
             <hr />
-            <h6>${book.volumeInfo.title}</h6>
-            <p>Author: ${book.volumeInfo.authors[0]}</p>
+            <h6 class="text-center">${book.volumeInfo.title}</h6>
+            <p class="text-center">Author: ${book.volumeInfo.authors[0]}</p>
           </div>
 
           `;
