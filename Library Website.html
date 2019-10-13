@@ -3,9 +3,12 @@
 <html>
   <head>
     <title> Welcome </title>
-    <!-- DEPENDENCIES FOR BOOTSTRAP -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- DEPENDENCIES FOR MATERIAL ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- DEPENDENCIES FOR FONT AWESOME -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- DEPENDENCIES FOR BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
@@ -30,7 +33,7 @@
       <!-- SEARCH FORM -->  
       <form class="btn-group col-sm-12 col-md-8" action="" onsubmit='return false' method='get'>
           <input class="form-control" type="text" placeholder="Search.." name="search" id="search">
-          <button class="btn btn-primary" type="submit" onclick='getBookData()'><i class="fa fa-search"></i></button>
+          <button class="btn btn-danger" type="submit" onclick='getBookData()'><i class="fa fa-search"></i></button>
       </form>  
       
       <!-- BOOKS -->
@@ -40,6 +43,9 @@
         </div>
       </div>
     </div>
+    
+
+    
     
     <!-- DEPENDENCIES FOR BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
