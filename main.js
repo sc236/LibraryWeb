@@ -20,7 +20,7 @@ async function getBookData(){
           console.log(`Book: ${book.volumeInfo.title}`);
           renderDom.innerHTML+=`
 
-          <div class="col-4">
+          <div class="col-sm-12 col-md-6 col-lg-4">
             <img class="d-block mx-auto" style="height: 10em;" src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
             <hr />
             <h6>${book.volumeInfo.title}</h6>
