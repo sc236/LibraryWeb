@@ -14,6 +14,7 @@ h1{
     font-size: 40px;
     text-align: center;
     border: 3px solid yellow;
+   
 }
 h1:hover{
    color: aqua;
@@ -22,17 +23,26 @@ p{
     color: orangered;
     font-size: 20;
     text-align: center;
+     padding: inherit;
+    margin: inherit;
     
 }
 body{
     background: lightgray;
     text-align: center;
+   
 }
 li{
  display: inline;
     padding: inherit;
     margin: inherit;
+    color: darkslateblue;
     
+    
+}
+li:hover{
+     text-align: center;
+    position: relative;
     
 }
 =======
