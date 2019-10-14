@@ -35,21 +35,40 @@ function createInnerHTML(apidata,element){
       </div>
         
       <div class="modal" id="${book.id}" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title">${book.volumeInfo.title}</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Modal body text goes here.</p>
+              <div class="row">
+                <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="thumbnail" class="col-sm-12 col-md-6 col-lg-6 object">
+                <span class="col-sm-12 col-md-6 col-lg-6 small">
+                    ${book.volumeInfo.description}
+                </span>
+              </div>
+
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger">Check Out</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+              <div class="row w-100">
+                <div class="col-sm-12 col-md-12 col-lg-8 my-2">
+                  <span class="mx-2 small text-secondary">
+                    Publisher: ${book.volumeInfo.publisher}
+                  </span>
+                  <span class="mx-2 small text-secondary">
+                    Published: ${book.volumeInfo.publishedDate}
+                  </span>
+                </div>
+                
+                <div class="col-sm-12 col-md-12 col-lg-4 my-2">
+                  <button type="button" class="btn btn-danger">Check Out</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+             </div>
           </div>
         </div>
       </div>
