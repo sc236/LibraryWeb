@@ -11,7 +11,7 @@ async function getBookData(){
   renderDom.innerHTML = "";
 
   await fetch(
-    `${googleBooksApiUrl}key=${googleBooksApiKey}&q=${searchInput}`)
+    `${googleBooksApiUrl}key=${googleBooksApiKey}&q=${searchInput}&maxResults=18`)
     .then(function(response) {
       response.json()
       .then(function(data) {
