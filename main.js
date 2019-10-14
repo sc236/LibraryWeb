@@ -23,7 +23,7 @@ async function getBookData(){
 
 function createInnerHTML(apidata,element){
   apidata.items.forEach(function(book){
-    console.log(`Book: ${book.volumeInfo.title}`);
+    // console.log(`Book: ${book.volumeInfo.title}`);
     element.innerHTML+=`
       <div class="col-sm-12 col-md-6 col-lg-3 p-3 mb-5 mx-3 bg-light border red-border-hov" data-toggle="modal" data-target="#${book.id}" >
         <img class="d-block mx-auto" style="height: 10em;" src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
