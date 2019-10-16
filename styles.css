@@ -8,7 +8,7 @@
 }
 
 h1{
-    color: orange;
+    color: azure;
     font-size: 40px;
     text-align: center;
     border: 3px solid yellow;
@@ -19,31 +19,39 @@ h1{
 h1:hover{
    color: aqua;
     }
+
 p{
-    color: orangered;
+    color: lavenderblush;
     font-size: 20;
     text-align: center;
      padding: inherit;
-    margin: inherit;
+  
+     
     
 }
 body{
-    background: lightgray;
+    background-image: url("Books0.jpg");
+    background-size: cover;
     text-align: center;
+    background-attachment: fixed;
+  
+
    
 }
 li{
- display: inline;
-    padding: inherit;
-    margin: inherit;
-    color: darkslateblue;
+    display: inline;
+     padding: inherit;
+     margin: inherit;
+    font-size: 20px;
+ 
     
     
 }
 li:hover{
      text-align: left;
-    background-color: skyblue;
+    background-color: white;
     margin: inherit;
+ 
 
     
 }
@@ -51,5 +59,8 @@ ul{
     width: auto;
    padding: 5px;
     margin: 5px;
+
 }
+
+
 
