@@ -3,15 +3,18 @@
   border: 1px solid rgba(255, 0, 0, 0.596) !important;
 }
 
-.object{
-  object-fit: contain;
+.introduction{
+    background: url('./wood-repeating.jpg') repeat;
+    border-radius: 2rem;
+    padding: 1.5em;
+    box-shadow: 0px 2px 6px 2px rgb(19, 19, 19);
 }
 
 h1{
     color: azure;
     font-size: 40px;
     text-align: center;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     padding: 5px;
     margin: 5px;
    
@@ -61,6 +64,4 @@ ul{
     margin: 5px;
 
 }
-
-
 
