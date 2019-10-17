@@ -77,6 +77,6 @@ function createInnerHTML(apidata,element){
   });
 
 
-}
+
 
   

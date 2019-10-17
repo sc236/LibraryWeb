@@ -45,7 +45,9 @@ li{
     display: inline;
      padding: inherit;
      margin: inherit;
-    font-size: 20px;
+    font-size: 25px;
+   
+    
  
     
     
@@ -58,10 +60,15 @@ li:hover{
 
     
 }
+
 ul{
-    width: auto;
+   width: auto;
    padding: 5px;
     margin: 5px;
+}
 
+a{
+    color: salmon;
+  
 }
 
