@@ -14,45 +14,37 @@
     <!-- DEPENDENCIES FOR CUSTOM CSS -->
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    
+  <body onload='renderStoredBooks()'>
+
     <!-- INTRODUCTION HEADER -->
     <div class="container my-5">
-    <div class="introduction">
-      <h1> Online Library</h1>    
-
-         
-<p> This is an online library to that offers services electronically </p>
-  
-        <!-- TOP NAV BAR -->
-     <div class="top-list">
-      <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About </a></li>
-          <li><a href="./books.html">My Books</a></li>
-          <li><a href="#"> Services</a></li>
+      <div class="introduction">
+          <h1> Online Library</h1>    
+    
+             
+    <p> This is an online library to that offers services electronically </p>
       
-      </ul>
+            <!-- TOP NAV BAR -->
+         <div class="top-list">
+          <ul>
+              <li><a href="./LibraryWeb.html">Home</a></li>
+              <li><a href="#">About </a></li>
+              <li><a href="#">My Books</a></li>
+              <li><a href="#"> Services</a></li>
+          
+          </ul>
+        </div>
+      </div>
     </div>
 
-      <!-- SEARCH FORM -->  
-      <form autocomplete="off" class="btn-group col-sm-12 col-md-8" action="" onsubmit='return false' method='get'>
-          <input class="form-control" type="text" placeholder="Search.." name="search" id="search">
-          <button class="btn btn-danger" type="submit" onclick='getBookData()'><i class="fa fa-search"></i></button>
-      </form>  
-    </div>
 
-      <!-- BOOKS -->
+
       <div class="container">
         <div id="render-dom" class="row justify-content-center my-5">
           <!-- DO NOT PUT ANY CODE DIRECTLY INTO THE RENDER-DOM. THIS IS POPULATED BASED ON THE RESULTS FROM THE API -->
         </div>
       </div>
-    </div>
-    
 
-    
-    
     <!-- DEPENDENCIES FOR BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -60,8 +52,5 @@
     <!-- CUSTOM JAVASCRIPT -->
     <script src="./main.js"></script>
   </body>
-    
-  </html>
-
-
   
+</html>

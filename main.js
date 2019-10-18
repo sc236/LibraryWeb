@@ -21,10 +21,13 @@ async function getBookData(){
 }
     
 
-function createInnerHTML(apidata,element){
-  apidata.items.forEach(function(book){
+function createInnerHTML(apidata,element)
+{
+  apidata.items.forEach(function(book)
+  {
     // console.log(`Book: ${book.volumeInfo.title}`);
-    element.innerHTML+=`
+    element.innerHTML+=
+    `
       <div class="col-sm-12 col-md-6 col-lg-3 p-3 mb-5 mx-3 bg-light border red-border-hov" data-toggle="modal" data-target="#${book.id}" >
         <img class="d-block mx-auto" style="height: 10em;" src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
         <hr />
@@ -64,7 +67,7 @@ function createInnerHTML(apidata,element){
                 </div>
                 
                 <div class="col-sm-12 col-md-12 col-lg-4 my-2">
-                  <button type="button" class="btn btn-danger">Check Out</button>
+                  <button type="button" class="btn btn-danger" onclick='addBookToStorage(${JSON.stringify(book)})'>Check Out</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
               </div>
@@ -74,9 +77,47 @@ function createInnerHTML(apidata,element){
       </div>
 
     `;
-  });
+  })
+};
 
-
-
-
+function addBookToStorage(book){
+  localStorage.setItem(book.id,JSON.stringify(book));
   
+}
+function getBookFromStorage(book){
+  console.log(JSON.parse(localStorage.getItem(book)));
+}
+
+
+function renderStoredBooks(){
+  let renderDom = document.getElementById('render-dom');
+  renderDom.innerHTML = "";
+  
+  local = localStorage;
+  let bookData = [];
+  for(var key in local){
+    if(key!=null){
+      bookData.push(JSON.parse(localStorage.getItem(key)));
+    }
+  }
+  
+  for(var i = 0; i < bookData.length-6; i++){
+    renderDom.innerHTML += 
+    `
+    <div class="col-sm-12 col-md-6 col-lg-3 p-3 mb-5 mx-3 bg-light border red-border-hov" data-toggle="modal" data-target="#${bookData[i].id}" >
+      <img class="d-block mx-auto" style="height: 10em;" src="${bookData[i].volumeInfo.imageLinks.smallThumbnail}" alt="thumbnail" />
+      <hr />
+      <h6 class="text-center">${bookData[i].volumeInfo.title}</h6>
+      <p class="text-center">Author: ${bookData[i].volumeInfo.authors[0]}</p>
+      <span class="float-left"><i class="material-icons" style="color: rgb(248, 211, 0);">star</i> ${bookData[i].volumeInfo.averageRating!=undefined?bookData[i].volumeInfo.averageRating+"/5":"N/A"}</span>
+      <span class="badge badge-danger badge-pill float-right">Pages: ${bookData[i].volumeInfo.pageCount!=undefined?bookData[i].volumeInfo.pageCount:"Unknown"}</span>
+    </div>
+      
+    `;
+    
+    
+
+    console.log(bookData[i]);
+  }
+
+}
