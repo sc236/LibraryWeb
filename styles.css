@@ -22,6 +22,7 @@ h1{
 h1:hover{
    color: aqua;
     }
+/* paragpraphs in all the pages are the same style*/
 
 p{
     color: lavenderblush;
@@ -45,10 +46,9 @@ li{
      margin: inherit;
     font-size: 25px;
    
-    
  
     
-    
+ /* for selected menu icons */
 }
 li:hover{
      text-align: left;
