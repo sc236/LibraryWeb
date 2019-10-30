@@ -17,6 +17,7 @@ h1{
     /* border: 3px solid yellow; */
     padding: 5px;
     margin: 5px;
+    font-family: 'Lobster', cursive;
    
 }
 h1:hover{
@@ -45,6 +46,8 @@ li{
      padding: inherit;
      margin: inherit;
     font-size: 25px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.829);
+    font-weight: 600;
    
  
     
@@ -52,10 +55,9 @@ li{
 }
 li:hover{
      text-align: left;
-    background-color: white;
+    /* background-color: white; */
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.863);
     margin: inherit;
- 
-
     
 }
 
@@ -67,6 +69,13 @@ ul{
 
 a{
     color: salmon;
+    
   
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: salmon;
+
+
 }
 

@@ -15,13 +15,13 @@ async function getBookData(){
     .then(function(response) {
       response.json()
       .then(function(data) {
-          createInnerHTML(data,renderDom);
+          createBookElements(data,renderDom);
         });
       });
 }
     
 
-function createInnerHTML(apidata,element)
+function createBookElements(apidata,element)
 {
   apidata.items.forEach(function(book)
   {
